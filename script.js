@@ -1,4 +1,5 @@
 
+let results = document.getElementById("results")
 function yr() {
     let year = document.getElementById('year').value;
 
@@ -6,20 +7,24 @@ function yr() {
         if (year % 4 === 0) {
             if (year % 100 === 0) {
                 if (year % 400 === 0) {
-                    document.getElementById("results").innerHTML = 'A Leap Year';
-                    // output.style.fontcolor('red');
+                    results.innerHTML = 'A Leap Year';
+                    results.style.color = 'white';
+                    
                 } else {
-                   document.getElementById("results").innerHTML = 'A Normal Year';
+                  results.innerHTML = 'A Normal Year';
+                  results.style.color = 'rgb(128, 126, 126)';
                 }
             } else {
-                document.getElementById("results").innerHTML = 'A Leap Year';
-                // output.style.css ({'color':'red'});
+                results.innerHTML = 'A Leap Year';
+                results.style.color = 'white';
+               
             }
         } else {
-            document.getElementById("results").innerHTML = 'A Normal Year';
+            results.innerHTML = 'A Normal Year';
+            results.style.color = 'rgb(128, 126, 126)';
         }
     } else {
-        document.getElementById("results").innerHTML = 'Error';
+        results.innerHTML = 'Error';
     }
 
 }
